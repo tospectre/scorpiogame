@@ -29,10 +29,13 @@ class Square extends React.Component {
 
 class Board extends React.Component {
     constructor(props, context) {
-        /*When using constructor in component, we must call parent's constructor passing arguments (here props & context)
-        using super() method*/
+        /*
+        * When using constructor in component, we must call parent's constructor passing arguments (here props & context)
+        * using super() method
+        */
         super(props, context);
-        /*Here we update the state of Board component by initializing property named 'square' with an array filled
+        /*
+        * Here we update the state of Board component by initializing property named 'square' with an array filled
         * with null values
         */
         this.state = {
@@ -47,7 +50,6 @@ class Board extends React.Component {
         return (
             <>
                 <div>
-                    {/*<MyButton/>*/}
                     <div className="status">{status}</div>
                     <div className="board-row">
                         {this.renderSquare(0)}
@@ -79,13 +81,10 @@ class Board extends React.Component {
     }
 
     handleClick(i) {
-
     }
 }
 
 class Game extends React.Component {
-
-
     constructor(props, context) {
         super(props, context);
         this.state = {
@@ -115,11 +114,4 @@ class Game extends React.Component {
         )
     }
 }
-
-// function MyButton() {
-//     return (
-//         <button>My first button</button>
-//     );
-// }
-
 export default App;
